@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoogleChats - Регистрация</title>
+    <meta name="theme-color" color="#4285f4">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .registration-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+        }
+
+        .registration-card {
+            background: var(--google-white);
+            border-radius: 24px;
+            padding: 40px;
+            width: 100%;
+            max-width: 480px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .registration-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-large {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--google-blue);
+            margin-bottom: 8px;
+        }
+
+        .logo-icon-large {
+            font-size: 40px;
+            color: var(--google-blue);
+        }
+
+        .subtitle {
+            color: var(--google-grey);
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--google-dark-grey);
+            font-size: 14px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #dadce0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--google-blue);
+            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+        }
+
+        .name-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .avatar-section {
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .avatar-preview {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--google-light-grey);
+            margin: 0 auto 16px;
+            overflow: hidden;
+            border: 3px solid var(--google-white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .avatar-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .avatar-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .avatar-upload {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: var(--google-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .avatar-input {
+            display: none;
+        }
+
+        .description-input {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .continue-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--google-blue);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+
+        .continue-btn:hover {
+            background: #3367d6;
+        }
+
+        .continue-btn:disabled {
+            background: var(--google-grey);
+            cursor: not-allowed;
+        }
+
+        .privacy-notice {
+            text-align: center;
+            margin-top: 24px;
+            font
